@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FriendaddComponent } from './friendadd/friendadd.component';
 import { FriendviewComponent } from './friendview/friendview.component';
+import { NavabrComponent } from './navabr/navabr.component';
 
 
-const myRoute:Routes=[
+const myRoute: Routes=[
 {
-  path=
+  path:"",
+  component:FriendaddComponent
+},
+{
+  path:"friendview",
+  component:FriendviewComponent
 }
 ]
 
@@ -18,11 +24,12 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     FriendaddComponent,
-    FriendviewComponent
+    FriendviewComponent,
+    NavabrComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,RouterModule
+    AppRoutingModule,RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
