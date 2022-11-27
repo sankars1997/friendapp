@@ -1,18 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FriendaddComponent } from './friendadd/friendadd.component';
+import { FriendviewComponent } from './friendview/friendview.component';
+
+
+const myRoute:Routes=[
+{
+  path=
+}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    FriendaddComponent
+    FriendaddComponent,
+    FriendviewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
